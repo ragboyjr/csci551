@@ -6,4 +6,4 @@ bin:
 	mkdir bin
 
 main.o: main.c
-	clang -c main.c
+	clang -c main.c -O3
