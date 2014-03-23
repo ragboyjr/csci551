@@ -70,23 +70,6 @@ static void find_n_binary()
         }
     }
     
-    /* now that we've converged, let's start counting back to see if there
-       are any smaller values */
-    
-    for (i = max_value; i > 0; i--) {
-        approx_val  = trapazoid_calc(100, 600, i, calc_f_of_x),
-        t_error     = t_val - approx_val,
-        abs_t_error = cabs(t_error / t_val);
-        
-        if (abs_t_error < MIN_APPROX_ERROR) {
-            num_traps = i;
-        }
-    }
-    
-    approx_val  = trapazoid_calc(100, 600, num_traps, calc_f_of_x),
-    t_error     = t_val - approx_val,
-    abs_t_error = cabs(t_error / t_val);
-    
     printf("t            = %ld\n", num_traps);
     printf("actual value = %.14lg\n", t_val);
     printf("trap calc    = %.14lg\n", approx_val);
@@ -124,9 +107,13 @@ int main(int argc, char * argv[])
 {
     puts("main");
 
-    find_n_binary();
-    //find_n(argc, argv);
-    
+    if (argc < 2) {
+        find_n_binary();
+    }
+    else {
+        find_n(argc, argv);
+    }
+
     puts("done");
 
     return 0;
