@@ -1,9 +1,13 @@
+
+
+======== n = 1100000 =========
+
 a = 100.000000, b = 600.000000, n = 1100000, p = 1
 speedup = 1.000000, efficiency = 1.000000
 
 [
     {
-        "elapsed_time": 0.61290479, 
+        "elapsed_time": 0.61289597, 
         "a": 100.0, 
         "b": 600.0, 
         "result": 4.00372090015315, 
@@ -13,7 +17,7 @@ speedup = 1.000000, efficiency = 1.000000
         "abs_rel_t_error": 4.546655e-13
     }, 
     {
-        "elapsed_time": 0.61294508, 
+        "elapsed_time": 0.61296511, 
         "a": 100.0, 
         "b": 600.0, 
         "result": 4.00372090015315, 
@@ -23,7 +27,7 @@ speedup = 1.000000, efficiency = 1.000000
         "abs_rel_t_error": 4.546655e-13
     }, 
     {
-        "elapsed_time": 0.61300683, 
+        "elapsed_time": 0.61300397, 
         "a": 100.0, 
         "b": 600.0, 
         "result": 4.00372090015315, 
@@ -33,7 +37,7 @@ speedup = 1.000000, efficiency = 1.000000
         "abs_rel_t_error": 4.546655e-13
     }, 
     {
-        "elapsed_time": 0.61305499, 
+        "elapsed_time": 0.61427402, 
         "a": 100.0, 
         "b": 600.0, 
         "result": 4.00372090015315, 
@@ -43,7 +47,7 @@ speedup = 1.000000, efficiency = 1.000000
         "abs_rel_t_error": 4.546655e-13
     }, 
     {
-        "elapsed_time": 0.61349702, 
+        "elapsed_time": 0.61434984, 
         "a": 100.0, 
         "b": 600.0, 
         "result": 4.00372090015315, 
@@ -51,6 +55,570 @@ speedup = 1.000000, efficiency = 1.000000
         "num_proccessors": 1, 
         "num_trapezoids": 1100000, 
         "abs_rel_t_error": 4.546655e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 2
+speedup = 1.999140, efficiency = 0.999570
+
+[
+    {
+        "elapsed_time": 0.30657983, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015324, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.779496e-13
+    }, 
+    {
+        "elapsed_time": 0.30665994, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015324, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.779496e-13
+    }, 
+    {
+        "elapsed_time": 0.30672097, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015324, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.779496e-13
+    }, 
+    {
+        "elapsed_time": 0.30692315, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015324, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.779496e-13
+    }, 
+    {
+        "elapsed_time": 0.31076908, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015324, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.779496e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 4
+speedup = 3.987380, efficiency = 0.996845
+
+[
+    {
+        "elapsed_time": 0.15370893, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015314, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.525074e-13
+    }, 
+    {
+        "elapsed_time": 0.15373206, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015314, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.525074e-13
+    }, 
+    {
+        "elapsed_time": 0.15377808, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015314, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.525074e-13
+    }, 
+    {
+        "elapsed_time": 0.15377998, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015314, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.525074e-13
+    }, 
+    {
+        "elapsed_time": 0.15423584, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015314, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.525074e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 8
+speedup = 7.983528, efficiency = 0.997941
+
+[
+    {
+        "elapsed_time": 0.076770067, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015319, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.650014e-13
+    }, 
+    {
+        "elapsed_time": 0.076771021, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015319, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.650014e-13
+    }, 
+    {
+        "elapsed_time": 0.076916933, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015319, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.650014e-13
+    }, 
+    {
+        "elapsed_time": 0.077572823, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015319, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.650014e-13
+    }, 
+    {
+        "elapsed_time": 0.07782197, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015319, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.650014e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 14
+speedup = 12.796671, efficiency = 0.914048
+
+[
+    {
+        "elapsed_time": 0.047894955, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00371194777592, 
+        "min_error": 5e-13, 
+        "num_proccessors": 14, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 2.236014e-06
+    }, 
+    {
+        "elapsed_time": 0.048383951, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00371194777592, 
+        "min_error": 5e-13, 
+        "num_proccessors": 14, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 2.236014e-06
+    }, 
+    {
+        "elapsed_time": 0.049103022, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00371194777592, 
+        "min_error": 5e-13, 
+        "num_proccessors": 14, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 2.236014e-06
+    }, 
+    {
+        "elapsed_time": 0.049808979, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00371194777592, 
+        "min_error": 5e-13, 
+        "num_proccessors": 14, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 2.236014e-06
+    }, 
+    {
+        "elapsed_time": 0.057399988, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00371194777592, 
+        "min_error": 5e-13, 
+        "num_proccessors": 14, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 2.236014e-06
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 16
+speedup = 15.644685, efficiency = 0.977793
+
+[
+    {
+        "elapsed_time": 0.039175987, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015317, 
+        "min_error": 5e-13, 
+        "num_proccessors": 16, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.592087e-13
+    }, 
+    {
+        "elapsed_time": 0.0391891, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015317, 
+        "min_error": 5e-13, 
+        "num_proccessors": 16, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.592087e-13
+    }, 
+    {
+        "elapsed_time": 0.039237022, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015317, 
+        "min_error": 5e-13, 
+        "num_proccessors": 16, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.592087e-13
+    }, 
+    {
+        "elapsed_time": 0.039616823, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015317, 
+        "min_error": 5e-13, 
+        "num_proccessors": 16, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.592087e-13
+    }, 
+    {
+        "elapsed_time": 0.040078878, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015317, 
+        "min_error": 5e-13, 
+        "num_proccessors": 16, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.592087e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 1100000, p = 20
+speedup = 19.006396, efficiency = 0.950320
+
+[
+    {
+        "elapsed_time": 0.032246828, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015316, 
+        "min_error": 5e-13, 
+        "num_proccessors": 20, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.584136e-13
+    }, 
+    {
+        "elapsed_time": 0.032873869, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015316, 
+        "min_error": 5e-13, 
+        "num_proccessors": 20, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.584136e-13
+    }, 
+    {
+        "elapsed_time": 0.033511162, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015316, 
+        "min_error": 5e-13, 
+        "num_proccessors": 20, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.584136e-13
+    }, 
+    {
+        "elapsed_time": 0.034476995, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015316, 
+        "min_error": 5e-13, 
+        "num_proccessors": 20, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.584136e-13
+    }, 
+    {
+        "elapsed_time": 0.035912991, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015316, 
+        "min_error": 5e-13, 
+        "num_proccessors": 20, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.584136e-13
+    }
+]
+
+
+
+======== n = 2200000 =========
+
+a = 100.000000, b = 600.000000, n = 2200000, p = 1
+speedup = 1.000000, efficiency = 1.000000
+
+[
+    {
+        "elapsed_time": 1.225631, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015152, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 4.861275e-14
+    }, 
+    {
+        "elapsed_time": 1.22578, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015152, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 4.861275e-14
+    }, 
+    {
+        "elapsed_time": 1.225847, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015152, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 4.861275e-14
+    }, 
+    {
+        "elapsed_time": 1.2260039, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015152, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 4.861275e-14
+    }, 
+    {
+        "elapsed_time": 1.2261, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015152, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 4.861275e-14
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 2200000, p = 2
+speedup = 1.999049, efficiency = 0.999525
+
+[
+    {
+        "elapsed_time": 0.61310697, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015163, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 7.54179e-14
+    }, 
+    {
+        "elapsed_time": 0.61316586, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015163, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 7.54179e-14
+    }, 
+    {
+        "elapsed_time": 0.61318803, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015163, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 7.54179e-14
+    }, 
+    {
+        "elapsed_time": 0.613379, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015163, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 7.54179e-14
+    }, 
+    {
+        "elapsed_time": 0.61356401, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015163, 
+        "min_error": 5e-13, 
+        "num_proccessors": 2, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 7.54179e-14
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 2200000, p = 4
+speedup = 3.993013, efficiency = 0.998253
+
+[
+    {
+        "elapsed_time": 0.30694389, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.092651e-13
+    }, 
+    {
+        "elapsed_time": 0.30694604, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.092651e-13
+    }, 
+    {
+        "elapsed_time": 0.30703998, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.092651e-13
+    }, 
+    {
+        "elapsed_time": 0.30715799, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.092651e-13
+    }, 
+    {
+        "elapsed_time": 0.30725479, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 4, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.092651e-13
+    }
+]
+
+a = 100.000000, b = 600.000000, n = 2200000, p = 8
+speedup = 7.990607, efficiency = 0.998826
+
+[
+    {
+        "elapsed_time": 0.15338397, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.079021e-13
+    }, 
+    {
+        "elapsed_time": 0.15338898, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.079021e-13
+    }, 
+    {
+        "elapsed_time": 0.1535852, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.079021e-13
+    }, 
+    {
+        "elapsed_time": 0.15493011, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.079021e-13
+    }, 
+    {
+        "elapsed_time": 0.15664506, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015176, 
+        "min_error": 5e-13, 
+        "num_proccessors": 8, 
+        "num_trapezoids": 2200000, 
+        "abs_rel_t_error": 1.079021e-13
     }
 ]
 
