@@ -2,7 +2,7 @@ import re
 import sys
 import os
 import json
-from subprocess import Popen, PIPE
+from subprocess import check_output 
 
 class MPIRun:
 
@@ -18,6 +18,7 @@ class MPIRun:
         self.speedup    = 1
         self.efficiency = 1
         self.results = []
+        self.hosts   = []
         
         # create the re pattern
         self._create_pattern()
@@ -28,7 +29,7 @@ class MPIRun:
         i = 0
         while i < MPIRun.MAX_RUNS:
             self.results.append(self._mpirun())
-            i++
+            i += 1
         
         # sort the results
         self.results = sorted(self.results, cmp=lambda a, b: compare(a.elapsed_time, b.elapsed_time))
@@ -43,20 +44,15 @@ class MPIRun:
     def calc_speedup(self, run)
         self.speedup    = run.results[0]['elapsed_time'] / self.results[0]['elapsed_time']
         self.efficiency = self.speedup / self.p
-    
+
     def _mpirun(self):
         hostfile = self._create_host_file()
         
-        inp_args = ['echo', '"%d %d %d"' % (self.a, self.b, self.n)]
-        mpi_args = ['mpirun', '--prefix', '/opt/openmpi', '-hostfile', hostfile, "./bin/integrate"]
-        
-        p1 = Popen(inp_args, stdout=PIPE)
-        p2 = Popen(mpi_args, stdin=p1.stdout, stdout=PIPE)
-        p1.stdout.close()
-        output = p2.communicate()[0]
-        
+        cmd = 'echo "%d %d %d" | mpirun --prefix /opt/openmpi -hostfile %s ./bin/integrate' % \
+            (self.a, self.b, self.n, hostfile)
+
+        output = check_output(cmd, shell=True)
         return self._parse_output(output)
-        
     
     def _parse_output(self, output):
         m = self.re.search(output)
@@ -78,7 +74,7 @@ class MPIRun:
         end_of_line_pattern = ".+\s+"
 
         output_re_pattern = \
-            r"Running on (\d+) processors%(eol)s" + \
+            r"Running on (\d+) processor%(eol)s" + \
             r"Elapsed time = %(float)s %(eol)s" + \
             r"With n = (\d+)%(eol)s" + \
             r"our estimate.+from (\d+\.\d+) to (\d+\.\d+) = %(float)s%(eol)s" + \
@@ -116,7 +112,13 @@ class MPIRun:
         while i < num_hosts:
             host = self.hosts[i]
             f.write("%s slots=%d\n" % (host, MPIRun.NUM_SLOTS))
-            i++
+            i += 1
+
+        slots = self.p % MPIRun.NUM_SLOTS
+
+        if slots > 0:
+            f.write("%s slots=%d\n" % (self.hosts[i], slots))
+        
         f.close()
         
         return file_name
