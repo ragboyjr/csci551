@@ -1,0 +1,56 @@
+a = 100.000000, b = 600.000000, n = 1100000, p = 1
+speedup = 1.000000, efficiency = 1.000000
+
+[
+    {
+        "elapsed_time": 0.61290479, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015315, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.546655e-13
+    }, 
+    {
+        "elapsed_time": 0.61294508, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015315, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.546655e-13
+    }, 
+    {
+        "elapsed_time": 0.61300683, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015315, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.546655e-13
+    }, 
+    {
+        "elapsed_time": 0.61305499, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015315, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.546655e-13
+    }, 
+    {
+        "elapsed_time": 0.61349702, 
+        "a": 100.0, 
+        "b": 600.0, 
+        "result": 4.00372090015315, 
+        "min_error": 5e-13, 
+        "num_proccessors": 1, 
+        "num_trapezoids": 1100000, 
+        "abs_rel_t_error": 4.546655e-13
+    }
+]
+

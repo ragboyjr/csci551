@@ -32,7 +32,7 @@ class MPIRun:
             i += 1
         
         # sort the results
-        self.results = sorted(self.results, cmp=lambda a, b: compare(a.elapsed_time, b.elapsed_time))
+        self.results = sorted(self.results, cmp=lambda a, b: cmp(a['elapsed_time'], b['elapsed_time']))
     
     def output(self, f):
     
@@ -41,7 +41,7 @@ class MPIRun:
         f.write(json.dumps(self.results, indent=4))
         f.write("\n\n")
     
-    def calc_speedup(self, run)
+    def calc_speedup(self, run):
         self.speedup    = run.results[0]['elapsed_time'] / self.results[0]['elapsed_time']
         self.efficiency = self.speedup / self.p
 
@@ -125,21 +125,31 @@ class MPIRun:
 
 out_f = open("run-output.txt", 'w')
 
-base_n = 100000
+base_n = 1090313
+base_n = 1100000
 
-mpiruns = [
-    MPIRun(100, 600, base_n, 1),
-    MPIRun(100, 600, base_n, 2),
-#     MPIRun(100, 600, base_n, 4),
-#     MPIRun(100, 600, base_n, 8),
-#     MPIRun(100, 600, base_n, 14),
-#     MPIRun(100, 600, base_n, 16),
-#     MPIRun(100, 600, base_n, 20)
+n_vals = [
+    base_n,
+    base_n * 2,
+    base_n * 4,
+    base_n * 8,
+    base_n / 2,
+    base_n / 4,
+    base_n / 8,
+]
+p_vals = [
+    1, 2, 4, 8, 14, 16, 20,
 ]
 
-for r in mpiruns:
-    r.run()
-    r.calc_speedup(mpiruns[0])
-    r.output(out_f)
+for n in n_vals:
+    out_f.write("\n\n======== n = %d =========\n\n" % n)
+
+    mpiruns = []
+    for p in p_vals:
+        r = MPIRun(100, 600, n, p)
+        mpiruns.append(r)
+        r.run()
+        r.calc_speedup(mpiruns[0])
+        r.output(out_f)
 
 out_f.close()
