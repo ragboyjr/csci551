@@ -1,7 +1,7 @@
 import re
 import sys
 import os
-import pprint
+import json
 from subprocess import Popen, PIPE
 
 class MPIRun:
@@ -15,6 +15,8 @@ class MPIRun:
         self.b = b
         self.n = n
         self.p = p
+        self.speedup    = 1
+        self.efficiency = 1
         self.results = []
         
         # create the re pattern
@@ -30,7 +32,18 @@ class MPIRun:
         
         # sort the results
         self.results = sorted(self.results, cmp=lambda a, b: compare(a.elapsed_time, b.elapsed_time))
-        
+    
+    def output(self, f):
+    
+        f.write("a = %f, b = %f, n = %d, p = %d\n" % (self.a, self.b, self.n, self.p))
+        f.write("speedup = %f, efficiency = %f\n\n" % (self.speedup, self.efficiency))
+        f.write(json.dumps(self.results, indent=4))
+        f.write("\n\n")
+    
+    def calc_speedup(self, run)
+        self.speedup    = run.results[0]['elapsed_time'] / self.results[0]['elapsed_time']
+        self.efficiency = self.speedup / self.p
+    
     def _mpirun(self):
         hostfile = self._create_host_file()
         
@@ -108,9 +121,23 @@ class MPIRun:
         
         return file_name
 
-pp = pprint.PrettyPrinter(indent=4)
+out_f = open("run-output.txt", 'w')
 
-run = MPIRun(100, 600, 10000, 2)
-run.run()
+base_n = 100000
 
-pp.print(run.results)
+mpiruns = [
+    MPIRun(100, 600, base_n, 1),
+    MPIRun(100, 600, base_n, 2),
+#     MPIRun(100, 600, base_n, 4),
+#     MPIRun(100, 600, base_n, 8),
+#     MPIRun(100, 600, base_n, 14),
+#     MPIRun(100, 600, base_n, 16),
+#     MPIRun(100, 600, base_n, 20)
+]
+
+for r in mpiruns:
+    r.run()
+    r.calc_speedup(mpiruns[0])
+    r.output(out_f)
+
+out_f.close()
