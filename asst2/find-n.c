@@ -1,7 +1,18 @@
+/*
+ * Find N
+ * This program does two things. It calculates, via binary search, the minimum number of
+ * trapezoids to create a absolute relative true error less than the minimum accepted value
+ * It also accepts 1 command line argument of n (number of trapezoids) and using the trapezoidal
+ * rule to estimate the integral with n number of trapezoids passed in from the user
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "asst.h"
 
+/*
+ * Use binary search to find the minimun n and print the stats
+ */
 static void find_n_binary()
 {
     long min_value = 1,
@@ -47,6 +58,9 @@ static void find_n_binary()
     asst_destroy(as);
 }
 
+/*
+ * calculate the integral using num_traps and print the stats
+ */
 static void find_n(long num_traps)
 {
     double t_val, approx_val, t_error, abs_t_error;

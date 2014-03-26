@@ -159,6 +159,9 @@ static void calculate_local_input(int my_rank, int comm_sz, trap_data_t * global
     local->b = local->a + local->n * h;            /* rightmost local interval */
 }
 
+/*
+ * Print out the final statistics of the integration.
+ */
 static void print_statistics(double sum, double elapsed, trap_data_t * global, asst_t * as)
 {
     int comm_sz;

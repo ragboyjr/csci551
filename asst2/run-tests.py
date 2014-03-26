@@ -1,3 +1,7 @@
+#
+# The run script I use to do all of the mpi runs
+#
+
 import re
 import sys
 import os

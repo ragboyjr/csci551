@@ -25,4 +25,4 @@ integrate.o: integrate.c
 	mpicc -g -Wall -std=c99 -c integrate.c
 
 clean:
-	rm bin/*
+	rm bin/* *.o

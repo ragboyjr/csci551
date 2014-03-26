@@ -2,8 +2,10 @@
 #define _ASST2_ASST_H
 
 /*
- * Asst is the object responsible for the common functions
- * for calculate the estimate of an integral using the trapezoidal rule
+ * Asst is the object responsible for the common functions for this assignment.
+ * It holds the shared code for the find-n program and the integrate program.
+ * It mainly just holds the code for running the integral and calculating absolute 
+ * relative true error
  */
  
 #include <complex.h>
