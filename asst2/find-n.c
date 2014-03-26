@@ -56,11 +56,11 @@ static void find_n(long num_traps)
     abs_t_error = asst_abs_true_error(as, approx_val);
     
     printf("t            = %ld\n", num_traps);
-    printf("actual value = %.14lg\n", t_val);
-    printf("trap calc    = %.14lg\n", approx_val);
-    printf("true error   = %.14lg\n", t_error);
-    printf("abs t error  = %.14lg\n", abs_t_error);
-    printf("min error    = %.14lg\n", ASST_MIN_APPROX_VALUE);
+    printf("actual value = %.15e\n", t_val);
+    printf("trap calc    = %.15e\n", approx_val);
+    printf("true error   = %.15e\n", t_error);
+    printf("abs t error  = %.15e\n", abs_t_error);
+    printf("min error    = %.15e\n", ASST_MIN_APPROX_VALUE);
     
     asst_destroy(as);
 }

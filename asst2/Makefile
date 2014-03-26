@@ -9,13 +9,12 @@ bin:
 find-n: find-n.o bin asst.o
 	clang find-n.o asst.o -o bin/find-n -lm
 
-find-n.o: find-n.c
+find-n.o: find-n.c asst.h
 	clang -c find-n.c
 
 # Assignment
-asst.o: asst.c
+asst.o: asst.c asst.h
 	clang -c asst.c
-
 
 # Integrate
 
