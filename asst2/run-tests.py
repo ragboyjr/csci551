@@ -15,6 +15,7 @@ class MPIRun:
         self.b = b
         self.n = n
         self.p = p
+        self.failed     = 0
         self.speedup    = 1
         self.efficiency = 1
         self.results = []
@@ -28,7 +29,12 @@ class MPIRun:
         
         i = 0
         while i < MPIRun.MAX_RUNS:
-            self.results.append(self._mpirun())
+            run = self._mpirun()
+
+            if not run:
+                continue
+
+            self.results.append(run)
             i += 1
         
         # sort the results
@@ -50,12 +56,29 @@ class MPIRun:
         
         cmd = 'echo "%d %d %d" | mpirun --prefix /opt/openmpi -hostfile %s ./bin/integrate' % \
             (self.a, self.b, self.n, hostfile)
+        
+        try:
+            output = check_output(cmd, shell=True)
+        except:
+            return None
 
-        output = check_output(cmd, shell=True)
         return self._parse_output(output)
     
     def _parse_output(self, output):
         m = self.re.search(output)
+
+        if not m:
+            return {
+                "num_processors"  : 0,
+                "elapsed_time"    : 0,
+                "num_trapezoids"  : 0,
+                "a"               : 0,
+                "b"               : 0,
+                "result"          : 0,
+                "abs_rel_t_error" : 0,
+                "min_error"       : 0,
+            }
+
         data = {
             "num_proccessors" : int(m.group(1)),
             "elapsed_time"    : float(m.group(2)),
@@ -142,13 +165,23 @@ p_vals = [
 ]
 
 for n in n_vals:
-    out_f.write("\n\n======== n = %d =========\n\n" % n)
+    output = "\n\n======== n = %d =========\n\n" % n
+    
+    print output,
+    out_f.write(output)
 
     mpiruns = []
     for p in p_vals:
+        print "p = %d" % p
         r = MPIRun(100, 600, n, p)
         mpiruns.append(r)
+
         r.run()
+
+        if r.failed:
+            print "run failed"
+            continue
+
         r.calc_speedup(mpiruns[0])
         r.output(out_f)
 
