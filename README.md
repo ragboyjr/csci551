@@ -1,4 +1,4 @@
-csci550
+csci551
 =======
 
-CSCI550 Assignments
+CSCI551 Assignments
