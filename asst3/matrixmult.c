@@ -1,10 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 #include <assert.h>
 #include <time.h>
 #include <ctype.h>
 #include <mpi.h>
+
 
 /* global vars */
 static int my_rank;
