@@ -136,10 +136,10 @@ out_f = open("run-output.txt", 'w')
 
 form_vals = ["ijk", "ikj", "kij"]
 p_vals = [
-    1, 2, 4, 8, 14, 16, 20,
+    1, 2, 4, 8, 12, 16, 20,
 ]
 #p_vals.reverse()
-n = 560 
+n = 720 
 for form in form_vals:
     output = "\n\n======== %s =========\n\n" % form
     
