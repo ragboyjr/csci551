@@ -1,0 +1,1 @@
+error: matrix n needs to be greater than 1
