@@ -1,7 +1,7 @@
 all: bin/gauss-serial
 
 bin/gauss-serial: gauss-serial.o matrix.o vector.o bin
-	gcc -o bin/gauss-serial gauss-serial.o matrix.o vector.o
+	gcc -o bin/gauss-serial gauss-serial.o matrix.o vector.o -lm
 	
 bin:
 	mkdir bin

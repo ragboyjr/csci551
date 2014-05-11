@@ -74,7 +74,7 @@ static void guassian_eliminate_idx(matrix_t * A, vector_t * b, int k, int cur_ro
     
     /* loop over the columns of the matrix, we don't need to worry about previous columns
        because they have already been eliminated */    
-    for (int j = k; j < A->cols; j++) {
+    for (j = k; j < A->cols; j++) {
         cur_row[j] = top_row[j] * scaled_val - cur_row[j];
     }
     
