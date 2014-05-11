@@ -10,7 +10,11 @@ from subprocess import check_output
 
 class MPIRun:
 
+<<<<<<< HEAD
     MAX_RUNS  = 1 
+=======
+    MAX_RUNS  = 5 
+>>>>>>> 4bf7e2a38001c7b5c311d7dbbf5df61f221cf9b3
     HOST_FILE = "../machine-assignments.txt"
     NUM_SLOTS = 2
 
@@ -55,10 +59,15 @@ class MPIRun:
         self.efficiency = self.speedup / self.p
 
     def _mpirun(self):
-        hostfile = self._create_host_file()
+        #hostfile = self._create_host_file()
         
+<<<<<<< HEAD
         cmd = 'echo "%s r %d" | mpirun --prefix /opt/openmpi -hostfile %s ./bin/matrixmult 0' % \
             (self.form, self.n, hostfile)
+=======
+        cmd = 'echo "%s r %d" | mpirun -n %d ./bin/matrixmult 0' % \
+            (self.form, self.n, self.p)
+>>>>>>> 4bf7e2a38001c7b5c311d7dbbf5df61f221cf9b3
         
         try:
             output = check_output(cmd, shell=True)
@@ -88,7 +97,11 @@ class MPIRun:
         end_of_line_pattern = ".+\s+"
 
         output_re_pattern = \
+<<<<<<< HEAD
             r"running on (\d+) processor\(s\)\s+" + \
+=======
+            r"running on (\d+) processor\(s\).*\s+" +\
+>>>>>>> 4bf7e2a38001c7b5c311d7dbbf5df61f221cf9b3
             r"elapsed time = (\d+\.\d+) seconds"
 
         output_re_pattern = output_re_pattern
@@ -138,7 +151,12 @@ form_vals = ["ijk", "ikj", "kij"]
 p_vals = [
     1, 2, 4, 8, 12, 16, 20,
 ]
+<<<<<<< HEAD
 n = 4800 
+=======
+#p_vals.reverse()
+n = 720 
+>>>>>>> 4bf7e2a38001c7b5c311d7dbbf5df61f221cf9b3
 for form in form_vals:
     output = "\n\n======== %s =========\n\n" % form
     
@@ -149,7 +167,11 @@ for form in form_vals:
     for p in p_vals:
         print "p = %d" % p
 
+<<<<<<< HEAD
         if (n % p != 0):
+=======
+        if n % p != 0:
+>>>>>>> 4bf7e2a38001c7b5c311d7dbbf5df61f221cf9b3
             continue
 
         r = MPIRun(form, n, p) # 4800, size of the matrix to create

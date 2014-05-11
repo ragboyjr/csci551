@@ -18,24 +18,28 @@ static int comm_sz;
 #define matrix_foreach(m, i, j) assert(m);\
 for (i = 0, j = 0; i < m->rows && j < m->cols; (j == m->cols - 1) ? j = 0, i++ : j++)
 
+/* struct for storing matrices */
 typedef struct _matrix_t {
     double * data;
     int rows,
         cols;
 } matrix_t;
 
+/* enum for the multiplication type */
 typedef enum {
     MATRIX_MULT_IJK,
     MATRIX_MULT_IKJ,
     MATRIX_MULT_KIJ,
 } matrix_mult_t;
 
+/* simple struct for passing parameters around */
 typedef struct {
     matrix_t * A,
              * B,
              * C;
 } matrix_data_t;
 
+/* matrix initialization */
 matrix_t * matrix_create_with_data(int rows, int cols, double * data)
 {
     matrix_t * this = malloc(sizeof(matrix_t));
@@ -52,11 +56,13 @@ matrix_t * matrix_create(int rows, int cols)
     return matrix_create_with_data(rows, cols, calloc(sizeof(double), rows * cols));
 }
 
+/* some matrices need to allocate their data after initialization */
 void matrix_alloc_data(matrix_t * this)
 {
     this->data = calloc(sizeof(double), this->rows * this->cols);
 }
 
+/* freeup the matrix data */
 void matrix_destroy(matrix_t * this)
 {
     if (this->data) {
@@ -65,6 +71,7 @@ void matrix_destroy(matrix_t * this)
     free(this);
 }
 
+/* print out the matrix */
 void matrix_print(matrix_t * this)
 {
     int i, j;
@@ -87,6 +94,7 @@ void matrix_print(matrix_t * this)
     puts(")");
 }
 
+/* run the actual matrix multiplication */
 void matrix_mult_by_type(matrix_t ** C_ref, matrix_t * A, matrix_t * B, matrix_mult_t type)
 {
     int i, j, k, n = A->cols;
@@ -140,6 +148,7 @@ void matrix_mult_by_type(matrix_t ** C_ref, matrix_t * A, matrix_t * B, matrix_m
     
 }
 
+/* fill up a matrix with random data */
 static void build_random_matrix(matrix_t ** M_ref)
 {
     matrix_t * M = *M_ref;
@@ -150,6 +159,7 @@ static void build_random_matrix(matrix_t ** M_ref)
     }
 }
 
+/* parse the user input from stdin to create and fill the matrices */
 static void fill_global_matrices_from_user_input(matrix_mult_t * mult_type, matrix_t ** A, matrix_t ** B)
 {
     /* input must be in the form of
@@ -296,6 +306,7 @@ static void fill_global_matrices_from_user_input(matrix_mult_t * mult_type, matr
 //     matrix_idx(*B, 2, 1) = 6;
 // }
 
+/* distribute the global data to all of the processes */
 static void distribute_global_data(matrix_mult_t * mult_type, matrix_data_t * global, matrix_data_t * local)
 {    
     int n, a_size;
@@ -333,6 +344,7 @@ static void distribute_global_data(matrix_mult_t * mult_type, matrix_data_t * gl
     MPI_Scatter(global->A->data, a_size, MPI_DOUBLE, local->A->data, a_size, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 }
 
+/* run program initialization */
 static void main_initialize(int argc, char * argv[])
 {
     srand(time(NULL));
