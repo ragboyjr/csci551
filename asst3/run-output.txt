@@ -1,558 +1,470 @@
-
-
-======== ijk =========
-
-form = ijk, n = 720, p = 1
-speedup = 1.000000, efficiency = 1.000000
-
-[
-    {
-        "elapsed_time": 3.544332, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 3.5616269, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 3.568192, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 3.5744798, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 3.5763898, 
-        "num_proccessors": 1
-    }
-]
-
-form = ijk, n = 720, p = 2
-speedup = 1.986370, efficiency = 0.993185
-
-[
-    {
-        "elapsed_time": 1.7843261, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.786607, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.7898462, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.7920289, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.807224, 
-        "num_proccessors": 2
-    }
-]
-
-form = ijk, n = 720, p = 4
-speedup = 3.835559, efficiency = 0.958890
-
-[
-    {
-        "elapsed_time": 0.9240718, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.9302108, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.9325001, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.934916, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.942091, 
-        "num_proccessors": 4
-    }
-]
-
-form = ijk, n = 720, p = 8
-speedup = 6.775307, efficiency = 0.846913
-
-[
-    {
-        "elapsed_time": 0.5231249, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.5736649, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.5741348, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.5757589, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.5811491, 
-        "num_proccessors": 8
-    }
-]
-
-form = ijk, n = 720, p = 12
-speedup = 8.436552, efficiency = 0.703046
-
-[
-    {
-        "elapsed_time": 0.4201162, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.421526, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.4322722, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.434948, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.6809669, 
-        "num_proccessors": 12
-    }
-]
-
-form = ijk, n = 720, p = 16
-speedup = 10.340354, efficiency = 0.646272
-
-[
-    {
-        "elapsed_time": 0.342767, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.5009999, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.50752, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.50949, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.522362, 
-        "num_proccessors": 16
-    }
-]
-
-form = ijk, n = 720, p = 20
-speedup = 8.377730, efficiency = 0.418887
-
-[
-    {
-        "elapsed_time": 0.4230659, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.4282548, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.444129, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.444804, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.445116, 
-        "num_proccessors": 20
-    }
-]
-
-
-
-======== ikj =========
-
-form = ikj, n = 720, p = 1
-speedup = 1.000000, efficiency = 1.000000
-
-[
-    {
-        "elapsed_time": 2.544142, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5444021, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5459032, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5462089, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5548501, 
-        "num_proccessors": 1
-    }
-]
-
-form = ikj, n = 720, p = 2
-speedup = 1.993638, efficiency = 0.996819
-
-[
-    {
-        "elapsed_time": 1.2761302, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2761669, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2763271, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2769291, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2798319, 
-        "num_proccessors": 2
-    }
-]
-
-form = ikj, n = 720, p = 4
-speedup = 3.917718, efficiency = 0.979430
-
-[
-    {
-        "elapsed_time": 0.6493938, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.649446, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.651629, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.651814, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.6519878, 
-        "num_proccessors": 4
-    }
-]
-
-form = ikj, n = 720, p = 8
-speedup = 7.619064, efficiency = 0.952383
-
-[
-    {
-        "elapsed_time": 0.3339179, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.334075, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3347108, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3347411, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3395021, 
-        "num_proccessors": 8
-    }
-]
-
-form = ikj, n = 720, p = 12
-speedup = 10.885846, efficiency = 0.907154
-
-[
-    {
-        "elapsed_time": 0.233711, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.234282, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.2343662, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.23528, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.4354789, 
-        "num_proccessors": 12
-    }
-]
-
-form = ikj, n = 720, p = 16
-speedup = 7.716932, efficiency = 0.482308
-
-[
-    {
-        "elapsed_time": 0.3296831, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.329762, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.3314202, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.3331759, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.3356931, 
-        "num_proccessors": 16
-    }
-]
-
-form = ikj, n = 720, p = 20
-speedup = 9.385076, efficiency = 0.469254
-
-[
-    {
-        "elapsed_time": 0.2710838, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.272032, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2723, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2728851, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2733891, 
-        "num_proccessors": 20
-    }
-]
-
-
-
-======== kij =========
-
-form = kij, n = 720, p = 1
-speedup = 1.000000, efficiency = 1.000000
-
-[
-    {
-        "elapsed_time": 2.5487728, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.549031, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.549736, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5502279, 
-        "num_proccessors": 1
-    }, 
-    {
-        "elapsed_time": 2.5585048, 
-        "num_proccessors": 1
-    }
-]
-
-form = kij, n = 720, p = 2
-speedup = 1.992857, efficiency = 0.996429
-
-[
-    {
-        "elapsed_time": 1.278954, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2790551, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.279758, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2825069, 
-        "num_proccessors": 2
-    }, 
-    {
-        "elapsed_time": 1.2825541, 
-        "num_proccessors": 2
-    }
-]
-
-form = kij, n = 720, p = 4
-speedup = 3.911379, efficiency = 0.977845
-
-[
-    {
-        "elapsed_time": 0.6516302, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.6518881, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.652045, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.6521862, 
-        "num_proccessors": 4
-    }, 
-    {
-        "elapsed_time": 0.6541419, 
-        "num_proccessors": 4
-    }
-]
-
-form = kij, n = 720, p = 8
-speedup = 7.632384, efficiency = 0.954048
-
-[
-    {
-        "elapsed_time": 0.3339419, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.334444, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3346059, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3347189, 
-        "num_proccessors": 8
-    }, 
-    {
-        "elapsed_time": 0.3348231, 
-        "num_proccessors": 8
-    }
-]
-
-form = kij, n = 720, p = 12
-speedup = 10.973229, efficiency = 0.914436
-
-[
-    {
-        "elapsed_time": 0.2322719, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.2324128, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.2329919, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.2331181, 
-        "num_proccessors": 12
-    }, 
-    {
-        "elapsed_time": 0.432194, 
-        "num_proccessors": 12
-    }
-]
-
-form = kij, n = 720, p = 16
-speedup = 14.264862, efficiency = 0.891554
-
-[
-    {
-        "elapsed_time": 0.1786749, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.3246629, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.325645, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.328094, 
-        "num_proccessors": 16
-    }, 
-    {
-        "elapsed_time": 0.329453, 
-        "num_proccessors": 16
-    }
-]
-
-form = kij, n = 720, p = 20
-speedup = 9.538642, efficiency = 0.476932
-
-[
-    {
-        "elapsed_time": 0.267205, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2681229, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2689662, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.2714729, 
-        "num_proccessors": 20
-    }, 
-    {
-        "elapsed_time": 0.273469, 
-        "num_proccessors": 20
-    }
-]
-
+{
+    "ikj" : [
+        [
+            {
+                "elapsed_time": 3.544332, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 3.5616269, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 3.568192, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 3.5744798, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 3.5763898, 
+                "num_proccessors": 1
+            }
+        ],
+        [
+            {
+                "elapsed_time": 1.7843261, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.786607, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.7898462, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.7920289, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.807224, 
+                "num_proccessors": 2
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.9240718, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.9302108, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.9325001, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.934916, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.942091, 
+                "num_proccessors": 4
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.5231249, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.5736649, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.5741348, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.5757589, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.5811491, 
+                "num_proccessors": 8
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.4201162, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.421526, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.4322722, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.434948, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.6809669, 
+                "num_proccessors": 12
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.342767, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.5009999, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.50752, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.50949, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.522362, 
+                "num_proccessors": 16
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.4230659, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.4282548, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.444129, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.444804, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.445116, 
+                "num_proccessors": 20
+            }
+        ]
+    ],
+    "ikj"   : [
+        [
+            {
+                "elapsed_time": 2.544142, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5444021, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5459032, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5462089, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5548501, 
+                "num_proccessors": 1
+            }
+        ],
+        [
+            {
+                "elapsed_time": 1.2761302, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2761669, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2763271, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2769291, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2798319, 
+                "num_proccessors": 2
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.6493938, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.649446, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.651629, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.651814, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.6519878, 
+                "num_proccessors": 4
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.3339179, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.334075, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3347108, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3347411, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3395021, 
+                "num_proccessors": 8
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.233711, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.234282, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.2343662, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.23528, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.4354789, 
+                "num_proccessors": 12
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.3296831, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.329762, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.3314202, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.3331759, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.3356931, 
+                "num_proccessors": 16
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.2710838, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.272032, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2723, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2728851, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2733891, 
+                "num_proccessors": 20
+            }
+        ]
+    ],
+    "kij" : [
+        [
+            {
+                "elapsed_time": 2.5487728, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.549031, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.549736, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5502279, 
+                "num_proccessors": 1
+            }, 
+            {
+                "elapsed_time": 2.5585048, 
+                "num_proccessors": 1
+            }
+        ],
+        [
+            {
+                "elapsed_time": 1.278954, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2790551, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.279758, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2825069, 
+                "num_proccessors": 2
+            }, 
+            {
+                "elapsed_time": 1.2825541, 
+                "num_proccessors": 2
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.6516302, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.6518881, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.652045, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.6521862, 
+                "num_proccessors": 4
+            }, 
+            {
+                "elapsed_time": 0.6541419, 
+                "num_proccessors": 4
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.3339419, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.334444, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3346059, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3347189, 
+                "num_proccessors": 8
+            }, 
+            {
+                "elapsed_time": 0.3348231, 
+                "num_proccessors": 8
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.2322719, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.2324128, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.2329919, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.2331181, 
+                "num_proccessors": 12
+            }, 
+            {
+                "elapsed_time": 0.432194, 
+                "num_proccessors": 12
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.1786749, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.3246629, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.325645, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.328094, 
+                "num_proccessors": 16
+            }, 
+            {
+                "elapsed_time": 0.329453, 
+                "num_proccessors": 16
+            }
+        ],
+        [
+            {
+                "elapsed_time": 0.267205, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2681229, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2689662, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.2714729, 
+                "num_proccessors": 20
+            }, 
+            {
+                "elapsed_time": 0.273469, 
+                "num_proccessors": 20
+            }
+        ]
+    ]
+}
