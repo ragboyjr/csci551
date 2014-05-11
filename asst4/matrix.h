@@ -11,6 +11,7 @@ typedef struct _matrix_t {
 } matrix_t;
 
 matrix_t * matrix_create(int rows, int cols);
+matrix_t * matrix_clone(matrix_t * other);
 matrix_t * matrix_create_rand(int rows, int cols);
 
 void matrix_alloc_data(matrix_t * this);

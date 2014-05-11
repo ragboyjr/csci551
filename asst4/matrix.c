@@ -1,6 +1,8 @@
 #include "matrix.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include "vector.h"
 
 matrix_t * matrix_create(int rows, int cols)
 {
@@ -25,6 +27,25 @@ matrix_t * matrix_create_rand(int rows, int cols)
     int i,j;
     matrix_foreach(this, i, j) {
         this->data[i][j] = drand48() * 2e10 - 1e10;
+        //this->data[i][j] = rand() % 5 + 1;
+    }
+    
+    return this;
+}
+
+matrix_t * matrix_clone(matrix_t * other)
+{
+    int i;
+    matrix_t * this = malloc(sizeof(matrix_t));
+    
+    this->rows = other->rows,
+    this->cols = other->cols,
+    this->data = malloc(sizeof(double *) * other->rows);
+    
+    for (i = 0; i < other->rows; i++)
+    {
+        this->data[i] = malloc(sizeof(double) * other->rows);
+        memcpy(this->data[i], other->data[i], sizeof(double) * other->rows); /* copy over the data */
     }
     
     return this;
