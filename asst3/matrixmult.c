@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <mpi.h>
 
+
 /* global vars */
 static int my_rank;
 static int comm_sz;
