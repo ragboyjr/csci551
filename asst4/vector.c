@@ -37,8 +37,7 @@ vector_t * vector_create_rand(int size)
     vector_t * this = vector_create(size);
     
     vector_foreach(this, i) {
-        this->data[i] = drand48() * 2e10 - 1e10;
-        //this->data[i] = rand() % 5 + 1;
+        this->data[i] = drand48() * 2e6 - 1e6;
     }
     
     return this;

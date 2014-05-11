@@ -1,13 +1,13 @@
-all: bin/gauss-serial
+all: bin/gauss-eliminate
 
-bin/gauss-serial: gauss-serial.o matrix.o vector.o bin
-	gcc -o bin/gauss-serial gauss-serial.o matrix.o vector.o -lm
+bin/gauss-eliminate: gauss-eliminate.o matrix.o vector.o bin
+	gcc -o bin/gauss-eliminate -lm -fopenmp gauss-eliminate.o matrix.o vector.o
 	
 bin:
 	mkdir bin
 
-gauss-serial.o: gauss-serial.c
-	gcc -c gauss-serial.c
+gauss-eliminate.o: gauss-eliminate.c
+	gcc -c gauss-eliminate.c -fopenmp
 
 matrix.o: matrix.c
 	gcc -c matrix.c

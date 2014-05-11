@@ -6,7 +6,9 @@
 #include "vector.h"
 #include "matrix.h"
 
-static void get_input_params(int argc, char * argv[], int * n, int * p)
+int num_threads = 1;
+
+static void get_input_params(int argc, char * argv[], int * n)
 {
     if (argc < 3)
     {
@@ -14,8 +16,8 @@ static void get_input_params(int argc, char * argv[], int * n, int * p)
         exit(EXIT_FAILURE);
     }
     
-    *n = atoi(argv[1]);
-    *p = atoi(argv[2]);
+    *n          = atoi(argv[1]);
+    num_threads = atoi(argv[2]);
 }
 
 static void initialize_global_state()
@@ -74,6 +76,8 @@ static void guassian_eliminate_idx(matrix_t * A, vector_t * b, int k, int cur_ro
     
     /* loop over the columns of the matrix, we don't need to worry about previous columns
        because they have already been eliminated */    
+
+#pragma omp parallel for num_threads(num_threads)
     for (j = k; j < A->cols; j++) {
         cur_row[j] = top_row[j] * scaled_val - cur_row[j];
     }
@@ -146,7 +150,7 @@ static void matrix_mult_vector(matrix_t * A, vector_t * x, vector_t * b)
 
 int main(int argc, char * argv[])
 {
-    int n, p;
+    int n, n_threads = 0;
     matrix_t * A,
              * A_orig;
     vector_t * b,
@@ -157,7 +161,7 @@ int main(int argc, char * argv[])
     double t_start, t_end;
     
     
-    get_input_params(argc, argv, &n, &p);
+    get_input_params(argc, argv, &n);
     initialize_global_state();
     
     /* initialize data */
@@ -175,13 +179,18 @@ int main(int argc, char * argv[])
     
     t_end  = get_time_in_sec();
     
-    matrix_print(A);
-    
     /* calculate Ax - b and find it's l2norm to test for correctness */
     matrix_mult_vector(A_orig, x, check_res_mat);
     
     vector_subtract(check_res_mat, check_res_mat, b_orig); /* c = c - b */
     
+    printf("num-procs   = %d\n", omp_get_num_procs());
+
+#pragma omp parallel num_threads(num_threads)
+    n_threads = omp_get_num_threads();
+
+    printf("num-threads = %d\n", n_threads);
+
     printf("Performed Gaussian Elimination in %.12lfs\n", t_end - t_start);
     printf("Ax-b l2norm = %.6le\n", vector_l2norm(check_res_mat));
     

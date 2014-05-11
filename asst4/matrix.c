@@ -26,8 +26,7 @@ matrix_t * matrix_create_rand(int rows, int cols)
     
     int i,j;
     matrix_foreach(this, i, j) {
-        this->data[i][j] = drand48() * 2e10 - 1e10;
-        //this->data[i][j] = rand() % 5 + 1;
+        this->data[i][j] = drand48() * 2e6 - 1e6;
     }
     
     return this;
