@@ -75,9 +75,7 @@ static void guassian_eliminate_idx(matrix_t * A, vector_t * b, int k, int cur_ro
     int j;
     
     /* loop over the columns of the matrix, we don't need to worry about previous columns
-       because they have already been eliminated */    
-
-#pragma omp parallel for num_threads(num_threads)
+       because they have already been eliminated */
     for (j = k; j < A->cols; j++) {
         cur_row[j] = top_row[j] * scaled_val - cur_row[j];
     }
@@ -97,21 +95,28 @@ static void perform_gaussian_elimination_on_matrix(matrix_t * A, vector_t * b)
 {
     int k, i;
     double t_start, t_end;
-    
-    /* k loops over the diagonal */
-    for (k = 0; k < A->rows; k++)
+
+    #pragma omp parallel num_threads(num_threads) private(k, i)
     {
-        //t_start = get_time_in_sec() * 1000; /* milliseconds */       
+        /* k loops over the diagonal */
+        for (k = 0; k < A->rows; k++)
+        {
+            //t_start = get_time_in_sec() * 1000; /* milliseconds */       
+
+        #pragma omp single
+            perform_partial_pivot(A, b, k);
+            
+        #pragma omp barrier
+    
+            /* perform gaussian elimination on all of the rows of this col */
+        #pragma omp for schedule(dynamic, 1)
+            for (i = k + 1; i < A->rows; i++) {
+                guassian_eliminate_idx(A, b, k, i);
+            }
         
-        perform_partial_pivot(A, b, k);
-                
-        /* perform gaussian elimination on all of the rows of this col */
-        for (i = k + 1; i < A->rows; i++) {
-            guassian_eliminate_idx(A, b, k, i);
+            //t_end = get_time_in_sec() * 1000;
+            //printf("k = %d - %.8lfms\n", k, t_end - t_start);
         }
-        
-        //t_end = get_time_in_sec() * 1000;
-        //printf("k = %d - %.8lfms\n", k, t_end - t_start);
     }
 }
 
@@ -187,6 +192,7 @@ int main(int argc, char * argv[])
     printf("num-procs   = %d\n", omp_get_num_procs());
 
 #pragma omp parallel num_threads(num_threads)
+#pragma omp single
     n_threads = omp_get_num_threads();
 
     printf("num-threads = %d\n", n_threads);
