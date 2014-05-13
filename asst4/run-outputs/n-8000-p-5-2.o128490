@@ -1,0 +1,5 @@
+num-procs   = 40
+num-threads = 5
+Performed Gaussian Elimination in 305.325903892517s
+Ax-b l2norm = 1.685496e-03
+done
