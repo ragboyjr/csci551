@@ -127,7 +127,7 @@ static void perform_back_substitution(matrix_t * A, vector_t * x, vector_t * b)
     for (k = A->rows - 1; k >= 0; k--)
     {
         x->data[k] = b->data[k] / A->data[k][k];
-        
+    
         for (i = k - 1; i >= 0; i--) {
             b->data[i] = b->data[i] - A->data[i][k] * x->data[k];
         }
